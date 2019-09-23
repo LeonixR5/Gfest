@@ -15,52 +15,7 @@
     <link rel="stylesheet" href="/assets/css/styles.min.css?h=b7d5b5f15d4b4fab7a36cfb32c6c9f86">
     <style>
 
-    label{
-        margin: 0.30vw;
-    }
-        input[type=text], select{
-    padding: 12px 20px;
-    width: 90%;
-    margin: 0.30vw;
-    display: inline-block;
-    border: 1px solid orange;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
-input[type=password], select{
-    padding: 12px 20px;
-    width: 90%;
-    margin: 0.30vw;
-    display: inline-block;
-    border: 1px solid orange;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-    input[type=submit]{
-    width: 90%;
-    background-color: orange;
-    color: white;
-    padding: 14px 20px;
-    margin: 0.30vw ;
-    border: none;
-    border-radius:4px;
-    cursor:pointer;
-
-}
-    .form{
-        width: 20%;
-        background-color: #f2f2f2;
-        padding:1px;
-
-    }
-    @media only screen and (max-width: 600px) {
-        .form{
-            width:100%;
-        }
-    }
-    </style>
 </head>
 
 <body style="height: 650px;">
@@ -84,41 +39,77 @@ input[type=password], select{
                 class="gp-login box-shadow"></div>
     </div>
     </div>
-    <div class="form">
-    <h3>Creează cont</h3>
-    <form>
-            <label for="nume">Nume</label>
-            <input type="text" id="nume" name="Nume" placeholder="Nume..">
-
-            <label for="prenume">Prenume</label>
-            <input type="text" id="prenume" name="Prenume" placeholder="Prenume..">
-
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Email..">
-
-            <label for="pass">Parolă</label>
-            <input type="password" id="pass" name="pass" placeholder="Parola..">
-
-            <label for="nr">Număr Telefon</label>
-            <input type="text" id="nr" name="nr" placeholder="Număr Telefon..">
-
-            <input type="submit" value="Creează cont">
-    
-        </form>
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mod1">Open Modal</button>
+    <div class="modal fade bg-dark border rounded shadow" role="dialog" tabindex="-1" id="mod1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Înregistrare</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body bg-light float-none" style="filter: grayscale(0%) hue-rotate(0deg) saturate(104%);opacity: 1;">
+                    <form class="bg-light">
+                        <div class="form-group"><label for="nume">Nume</label><input class="border-warning form-control" type="text" name="nume" placeholder="nume.." style="width: 300px;margin: 2px;" required=""></div>
+                        <div class="form-group"><label for="prenume">Prenume</label><input class="border rounded-0 border-warning form-control" type="text" placeholder="prenume.." name="prenume" required=""></div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group text-center float-none" style="width: 145px;"><label for="sex">Sex</label><select class="border-warning custom-select" name="sex" style="width: 150px;" required=""><option value="1" selected="">Masculin</option><option value="2">Feminin</option></select></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group text-center" style="width: 145px;height: 75px;"><label class="text-center" for="varsta">Vârstă</label><input class="border-warning form-control" type="number" name="varsta" min="1" max="100" required="" style="width: 150px;margin: 0px;"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-warning text-white" type="button" data-toggle="modal" data-target="#mod2">Pasul următor</button></div>
+            </div>
+        </div>
     </div>
-    <br><br><br>
-    <div class="form">
-    <H3>Autentificare</H3>
-            <form>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email..">
-                
-                <label for="pass">Parolă</label>
-                <input type="password" id="pass" name="pass" placeholder="Parola..">
-        
-                <input type="submit" value="Autentificăte">
-            
-            </form>
+    <div class="modal fade bg-white" id="mod2" role="dialog" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Date de contact</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body bg-light">
+                    <form class="border-light">
+                        <div class="form-group bg-light"><label>Email</label><input class="border-warning form-control" type="email" required="" placeholder="email.." style="width: 300px;"></div>
+                        <div class="form-group bg-light"><label>Număr de telefon</label><input class="border-warning form-control" type="tel" required="" placeholder="număr.."></div>
+                        <div class="form-group bg-light"><label>Facebook</label><input class="border-warning form-control" type="text" required="" name="facebook" placeholder="facebook.."></div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod3">Pasul URMĂTOR</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" id="mod3" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Parolă</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group"><label>Parolă</label><input class="border-warning form-control" type="password" required=""></div>
+                        <div class="form-group"><label>Confirmare parolă</label><input class="border-warning form-control" type="password" required=""></div>
+                        <div class="form-group"><label>Întrebare de securitate</label><select class="border-warning form-control"><optgroup label="This is a group"><option value="12" selected="">Cine a fost primul tău prieten</option><option value="13">Cum se numea primul tău animal</option><option value="14">Orașul unde s-au întâlnit părinții tăi</option></optgroup></select></div><label>Răspuns</label>
+                        <input
+                            class="border rounded border-warning form-control" type="text" required=""></form>
+                    <div class="form-group">
+                        <div class="form-check d-flex align-items-start"><input class="form-check-input" type="checkbox" id="formCheck-1" required="" name="reguli" style="width: 20px;"><label class="form-check-label text-monospace text-center" for="formCheck-1">Am citit și sunt de acord cu regulile și termenii de condiție</label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod4">Finalizare</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Aproape ai terminat</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body bg-light">
+                    <p>Dacă vrei să verifici datele introduse apasă butonul "Înapoi", dacă nu apasă butonul "Finalizare" pentru a termina înregistrarea"</p>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning" type="button">finalizare</button></div>
+            </div>
+        </div>
     </div>
     <div class="d-flex flex-column justify-content-center" id="login-box"></div>
     <script src="/assets/js/jquery.min.js?h=83e266cb1712b47c265f77a8f9e18451"></script>
