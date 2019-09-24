@@ -19,13 +19,12 @@
 </head>
 
 <body>
-
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mod1">Open Modal</button>
-    <div class="modal fade bg-dark border rounded shadow" role="dialog" tabindex="-1" id="mod1">
-        <div class="modal-dialog modal-lg" role="document">
+    <button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod1" data-dismiss="modal">Deschide modal</button>
+    <div class="modal fade border rounded shadow" role="dialog" tabindex="-1" id="mod1">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-light">
-                    <h4 class="modal-title">Înregistrare</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title">Înregistrare</h4></div>
                 <div class="modal-body bg-light float-none" style="filter: grayscale(0%) hue-rotate(0deg) saturate(104%);opacity: 1;">
                     <form class="bg-light">
                         <div class="form-group"><label for="nume">Nume</label><input class="border-warning form-control" type="text" name="nume" placeholder="nume.." style="width: 300px;margin: 2px;" required=""></div>
@@ -40,15 +39,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer bg-light"><button class="btn btn-warning text-white" type="button" data-toggle="modal" data-target="#mod2">Pasul următor</button></div>
+                <div class="modal-footer bg-light"><button class="btn btn-warning text-white" type="button" data-toggle="modal" data-target="#mod2" data-dismiss="modal">Pasul următor</button></div>
             </div>
         </div>
     </div>
-    <div class="modal fade bg-white" id="mod2" role="dialog" tabindex="-1">
-        <div class="modal-dialog modal-lg" role="document">
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod2">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-light">
-                    <h4 class="modal-title">Date de contact</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title">Date de contact</h4></div>
                 <div class="modal-body bg-light">
                     <form class="border-light">
                         <div class="form-group bg-light"><label>Email</label><input class="border-warning form-control" type="email" required="" placeholder="email.." style="width: 300px;"></div>
@@ -56,27 +55,27 @@
                         <div class="form-group bg-light"><label>Facebook</label><input class="border-warning form-control" type="text" required="" name="facebook" placeholder="facebook.."></div>
                     </form>
                 </div>
-                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod3">Pasul URMĂTOR</button></div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod1">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod3" data-dismiss="modal">Pasul URMĂTOR</button></div>
             </div>
         </div>
     </div>
-    <div class="modal fade" role="dialog" id="mod3" tabindex="-1">
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod3">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Parolă</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
+                    <h4 class="modal-title text-dark">Parolă</h4></div>
+                <div class="modal-body bg-light">
                     <form>
-                        <div class="form-group"><label>Parolă</label><input class="border-warning form-control" type="password" required=""></div>
-                        <div class="form-group"><label>Confirmare parolă</label><input class="border-warning form-control" type="password" required=""></div>
-                        <div class="form-group"><label>Întrebare de securitate</label><select class="border-warning form-control"><optgroup label="This is a group"><option value="12" selected="">Cine a fost primul tău prieten</option><option value="13">Cum se numea primul tău animal</option><option value="14">Orașul unde s-au întâlnit părinții tăi</option></optgroup></select></div><label>Răspuns</label>
-                        <input
-                            class="border rounded border-warning form-control" type="text" required=""></form>
+                        <div class="form-group"><label>Parolă</label><input class="border-warning form-control" type="password" required="" placeholder="parola.."></div>
+                        <div class="form-group"><label>Confirmare parolă</label><input class="border-warning form-control" type="password" required="" placeholder="parola.."></div>
+                        <div class="form-group"><label class="bg-light">Întrebare de securitate</label><select class="border-warning form-control"><optgroup label="This is a group"><option value="12" selected="">Cine a fost primul tău prieten</option><option value="13">Cum se numea primul tău animal</option><option value="14">Orașul unde s-au întâlnit părinții tăi</option></optgroup></select></div>
+                        <label
+                            class="bg-light">Răspuns</label><input class="border rounded border-warning form-control" type="text" required="" placeholder="raspuns.."></form>
                     <div class="form-group">
-                        <div class="form-check d-flex align-items-start"><input class="form-check-input" type="checkbox" id="formCheck-1" required="" name="reguli" style="width: 20px;"><label class="form-check-label text-monospace text-center" for="formCheck-1">Am citit și sunt de acord cu regulile și termenii de condiție</label></div>
+                        <div class="form-check d-flex align-items-start"><input class="form-check-input" type="checkbox" id="formCheck-1" required="" name="reguli" style="width: 20px;"><label class="form-check-label text-monospace text-center bg-light" for="formCheck-1">Am citit și sunt de acord cu regulile și termenii de condiție</label></div>
                     </div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod4">Finalizare</button></div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod2">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod4" data-dismiss="modal">Finalizare</button></div>
             </div>
         </div>
     </div>
@@ -84,11 +83,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-light">
-                    <h4 class="modal-title">Aproape ai terminat</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title">Aproape ai terminat</h4></div>
                 <div class="modal-body bg-light">
                     <p>Dacă vrei să verifici datele introduse apasă butonul "Înapoi", dacă nu apasă butonul "Finalizare" pentru a termina înregistrarea"</p>
                 </div>
-                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal">ÎNAPOI</button><button class="btn btn-primary bg-warning" type="button">finalizare</button></div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod3">ÎNAPOI</button><button class="btn btn-primary bg-warning" type="button">finalizare</button></div>
             </div>
         </div>
     </div>
