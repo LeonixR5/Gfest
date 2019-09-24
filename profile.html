@@ -51,6 +51,12 @@
         .font-lobster {
             font-family: 'Lobster', cursive;
         }
+
+        @media (max-width:767px) {
+            .container-text-center-sm {
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -79,7 +85,7 @@
             src="/assets/img/Tricou_front.png?h=2d901209a7b18b79610b5dccc5fc56e3"
             style="align-items: center;width: 180px;padding-bottom: 0px;align-items: self-end;">
         <h2 class="text-center mb-5 animated bounceInUp font-lobster">Profile section</h2>
-        <div class="container">
+        <div class="container container-text-center-sm">
             <div class="inner-header mb-5">
                 <div class="row">
                     <div class="col-sm-12 col-md-2 animated bounceInLeft">
@@ -87,7 +93,32 @@
                             src="/assets/img/icon.png?h=24948883c5e74cd4774a28dc92aae6d0"><br>
                         <a href="#" class="text-center">Change photo</a>
                     </div>
-                    <div class="col-sm-12 col-md-10 animated bounceInRight">
+                    <div class="col-sm-12 col-md-10 animated bounceInRight d-block" id="infoText">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <p>John</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>Doe</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>johndoe@email.com</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <p>(055)222-333</p>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#">www.facebook/johndoe.com</a>
+                            </div>
+                            <div class="col-sm-12 col-md-6">
+                                <a href="#">www.instagram/johndoe.com</a>
+                            </div>
+                            <div class="col-sm-12 col-md-6 mt-3">
+                                <a href="#" id="updateInfo">Update info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-10 animated bounceInRight d-none" id="updateInfoForm">
                         <form>
                             <div class="row">
                                 <div class="col-sm-12 col-md-6">
@@ -138,7 +169,7 @@
                                     <!-- /.facebook-page -->
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Actualizeaza</button>
+                            <button type="submit" class="btn btn-primary" id="UpdateInfoBtn">Actualizeaza</button>
                         </form>
                     </div>
                 </div>
@@ -148,37 +179,53 @@
                 <div class="rewards">
                     <h3 class="animated bounceInLeft">Abtibilduri</h3>
                     <div class="row animated bounceInRight">
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                        <div class="col-sm-12 mt-3">
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
+                            <a data-toggle="modal" data-target="#modalAbtipilduri">
+                                <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                            </a>
                         </div>
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                        </div>
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                        </div>
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                        </div>
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                        </div>
-                        <div class="col-sm-12 col-md-2 col-lg-4 mt-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
-                        </div>
-
                     </div>
                 </div>
                 <!-- /.rewards -->
@@ -186,13 +233,62 @@
             <!-- /.content -->
         </div>
         <!-- /.container for content -->
+
+        <!-- modal abtipilduri -->
+        <div class="modal fade" id="modalAbtipilduri" tabindex="-1" role="dialog" aria-labelledby="abtipilduriLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="abtipilduriLabel">Modal </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="img-modal text-center">
+                            <img src="https://via.placeholder.com/75" alt="..." class="rounded-circle mb-2">
+                        </div>
+                        <h3>Sport</h3>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="/assets/js/jquery.min.js?h=83e266cb1712b47c265f77a8f9e18451"></script>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js?h=63715b63ee49d5fe4844c2ecae071373"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="/assets/js/script.min.js?h=56ded1ab5becce08fa95f819ee57ee4a"></script>
+
+    <script>
+        $('#updateInfo').click(function () {
+            // document.getElementById('infoText').classList.className('d-none');
+            if ($('#infoText').hasClass('d-block')) {
+                $('#infoText').removeClass('d-block');
+                $('#infoText').addClass('d-none');
+                $('#updateInfoForm').removeClass('d-none');
+                $('#updateInfoForm').addClass('d-block');
+            }
+
+            $('#UpdateInfoBtn').click(function () {
+                if ($('#updateInfoForm').hasClass('d-block')) {
+                    $('#updateInfoForm').removeClass('d-block');
+                    $('#updateInfoForm').addClass('d-none');
+                    $('#infoText').removeClass('d-none');
+                    $('#infoText').addClass('d-block');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
