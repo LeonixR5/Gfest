@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Gfest</title>
+    <title>G-Fest</title>
+    <meta property="og:image" content="assets/img/meeting.jpg">
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=9a991d5fc4e6873e9c2953d2677240a3">
     <link rel="manifest" href="/manifest.json?h=864eef657fadfaa8b7a99edca149f246">
     <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css?h=03ab36d1dde930b7d44a712f19075641">
@@ -13,114 +14,81 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css?h=b7d5b5f15d4b4fab7a36cfb32c6c9f86">
-    <style>
-
-    label{
-        margin: 0.30vw;
-    }
-        input[type=text], select{
-    padding: 12px 20px;
-    width: 90%;
-    margin: 0.30vw;
-    display: inline-block;
-    border: 1px solid orange;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=password], select{
-    padding: 12px 20px;
-    width: 90%;
-    margin: 0.30vw;
-    display: inline-block;
-    border: 1px solid orange;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-    input[type=submit]{
-    width: 90%;
-    background-color: orange;
-    color: white;
-    padding: 14px 20px;
-    margin: 0.30vw ;
-    border: none;
-    border-radius:4px;
-    cursor:pointer;
-
-}
-    .form{
-        width: 20%;
-        background-color: #f2f2f2;
-        padding:1px;
-
-    }
-    @media only screen and (max-width: 600px) {
-        .form{
-            width:100%;
-        }
-    }
-    </style>
 </head>
 
-<body style="height: 650px;">
-    <div id="wrapper">
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand"> <a href="/index.html">Home </a></li>
-                <li> <a href="/profile.html">Profile</a></li>
-                <li> <a href="/events.html">Events</a></li>
-                <li> <a class="invisible" href="#">LockDown</a></li>
-            </ul>
+<body>
+    <button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod1" data-dismiss="modal">Deschide modal</button>
+    <div class="modal fade border rounded shadow" role="dialog" tabindex="-1" id="mod1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Înregistrare</h4></div>
+                <div class="modal-body bg-light float-none" style="filter: grayscale(0%) hue-rotate(0deg) saturate(104%);opacity: 1;">
+                    <form class="bg-light">
+                        <div class="form-group"><label for="nume">Nume</label><input class="border-warning form-control" type="text" name="nume" placeholder="nume.." style="width: 300px;margin: 2px;" required=""></div>
+                        <div class="form-group"><label for="prenume">Prenume</label><input class="border rounded-0 border-warning form-control" type="text" placeholder="prenume.." name="prenume" required=""></div>
+                        <div class="form-row">
+                            <div class="col">
+                                <div class="form-group text-center float-none" style="width: 145px;"><label for="sex">Sex</label><select class="border-warning custom-select" name="sex" style="width: 150px;" required=""><option value="1" selected="">Masculin</option><option value="2">Feminin</option></select></div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group text-center" style="width: 145px;height: 75px;"><label class="text-center" for="varsta">Vârstă</label><input class="border-warning form-control" type="number" name="varsta" min="1" max="100" required="" style="width: 150px;margin: 0px;"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-warning text-white" type="button" data-toggle="modal" data-target="#mod2" data-dismiss="modal">Pasul următor</button></div>
+            </div>
         </div>
-        <div class="page-content-wrapper">
-            <div class="container-fluid"><a class="btn btn-link" role="button" id="menu-toggle" href="#menu-toggle"><i class="fa fa-bars"></i></a></div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Date de contact</h4></div>
+                <div class="modal-body bg-light">
+                    <form class="border-light">
+                        <div class="form-group bg-light"><label>Email</label><input class="border-warning form-control" type="email" required="" placeholder="email.." style="width: 300px;"></div>
+                        <div class="form-group bg-light"><label>Număr de telefon</label><input class="border-warning form-control" type="tel" required="" placeholder="număr.."></div>
+                        <div class="form-group bg-light"><label>Facebook</label><input class="border-warning form-control" type="text" required="" name="facebook" placeholder="facebook.."></div>
+                    </form>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod1">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod3" data-dismiss="modal">Pasul URMĂTOR</button></div>
+            </div>
         </div>
-        <h1 class="text-center">Welcome To&nbsp;</h1><img class="img-fluid mx-auto d-block" src="/assets/img/Tricou_front.png?h=2d901209a7b18b79610b5dccc5fc56e3" style="align-items: center;width: 300px;padding-bottom: 0px;align-items: self-end;">
-
-        <div class="login-box-content" style="padding-right: 20px;">
-            <div class="fb-login box-shadow"><a class="d-flex flex-row align-items-center social-login-link" href="#" style="align-items: inherit;"><i class="fa fa-facebook" style="margin-left:0px;padding-right:20px;padding-left:22px;width:56px;"></i>Login with Facebook</a></div>
-            <div
-                class="gp-login box-shadow"></div>
     </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-dark">Parolă</h4></div>
+                <div class="modal-body bg-light">
+                    <form>
+                        <div class="form-group"><label>Parolă</label><input class="border-warning form-control" type="password" required="" placeholder="parola.."></div>
+                        <div class="form-group"><label>Confirmare parolă</label><input class="border-warning form-control" type="password" required="" placeholder="parola.."></div>
+                        <div class="form-group"><label class="bg-light">Întrebare de securitate</label><select class="border-warning form-control"><optgroup label="This is a group"><option value="12" selected="">Cine a fost primul tău prieten</option><option value="13">Cum se numea primul tău animal</option><option value="14">Orașul unde s-au întâlnit părinții tăi</option></optgroup></select></div>
+                        <label
+                            class="bg-light">Răspuns</label><input class="border rounded border-warning form-control" type="text" required="" placeholder="raspuns.."></form>
+                    <div class="form-group">
+                        <div class="form-check d-flex align-items-start"><input class="form-check-input" type="checkbox" id="formCheck-1" required="" name="reguli" style="width: 20px;"><label class="form-check-label text-monospace text-center bg-light" for="formCheck-1">Am citit și sunt de acord cu regulile și termenii de condiție</label></div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod2">ÎNAPOI</button><button class="btn btn-primary bg-warning border-warning" type="button" data-toggle="modal" data-target="#mod4" data-dismiss="modal">Finalizare</button></div>
+            </div>
+        </div>
     </div>
-    <div class="form">
-    <h3>Creează cont</h3>
-    <form>
-            <label for="nume">Nume</label>
-            <input type="text" id="nume" name="Nume" placeholder="Nume..">
-
-            <label for="prenume">Prenume</label>
-            <input type="text" id="prenume" name="Prenume" placeholder="Prenume..">
-
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Email..">
-
-            <label for="pass">Parolă</label>
-            <input type="password" id="pass" name="pass" placeholder="Parola..">
-
-            <label for="nr">Număr Telefon</label>
-            <input type="text" id="nr" name="nr" placeholder="Număr Telefon..">
-
-            <input type="submit" value="Creează cont">
-    
-        </form>
+    <div class="modal fade" role="dialog" tabindex="-1" id="mod4">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-light">
+                    <h4 class="modal-title">Aproape ai terminat</h4></div>
+                <div class="modal-body bg-light">
+                    <p>Dacă vrei să verifici datele introduse apasă butonul "Înapoi", dacă nu apasă butonul "Finalizare" pentru a termina înregistrarea"</p>
+                </div>
+                <div class="modal-footer bg-light"><button class="btn btn-light" type="button" data-dismiss="modal" data-toggle="modal" data-target="#mod3">ÎNAPOI</button><button class="btn btn-primary bg-warning" type="button">finalizare</button></div>
+            </div>
+        </div>
     </div>
-    <br><br><br>
-    <div class="form">
-    <H3>Autentificare</H3>
-            <form>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email..">
-                
-                <label for="pass">Parolă</label>
-                <input type="password" id="pass" name="pass" placeholder="Parola..">
-        
-                <input type="submit" value="Autentificăte">
-            
-            </form>
-    </div>
-    <div class="d-flex flex-column justify-content-center" id="login-box"></div>
     <script src="/assets/js/jquery.min.js?h=83e266cb1712b47c265f77a8f9e18451"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js?h=63715b63ee49d5fe4844c2ecae071373"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
